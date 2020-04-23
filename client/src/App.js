@@ -30,8 +30,8 @@ const tableFieldList = [
   { title: "Address", field: "address", hidden: false },
   { title: "City", field: "city", hidden: false },
   { title: "Zip", field: "zip", hidden: false },
-  { title: "Zip +4", field: "zip4", hidden: false },
-  { title: "Type", field: "type", hidden: false },
+  { title: "Zip +4", field: "zip4", hidden: true },
+  { title: "Type", field: "type", hidden: true },
   { title: "Owner", field: "owner", hidden: false },
   { title: "Owner Address", field: "owner_address", hidden: false }
 ];

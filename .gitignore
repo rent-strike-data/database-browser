@@ -1,0 +1,9 @@
+node_modules/
+.eslintrc
+.env
+.git-credentials
+.gitconfig
+.vscode/
+.nyc_output/
+coverage/
+**/.DS_Store

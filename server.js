@@ -29,7 +29,7 @@ client.connect(err => {
 
 // routes ======================================================================
 const apiRoutes = require("./app/routes/apiRoutes");
-// const staticRoutes = require("./app/routes/staticRoutes");
+const staticRoutes = require("./app/routes/staticRoutes");
 
 // set static path
 if (process.env.NODE_ENV === "production") {

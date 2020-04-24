@@ -60,6 +60,7 @@ class App extends React.Component {
     axios.get(`${BASE_URL}/api/properties`)
       .then((response) => {
         if (response.status >299 || response.status <200) {
+          console.log('STATUS ERROR');
           console.log(response.data);
           console.log(response.status);
           console.log(response.statusText);
@@ -68,12 +69,13 @@ class App extends React.Component {
           const newState = {...this.state}
           newState.loading = false;
           this.setState({...newState});
-        } else if (typeof response.data == "array" && response.data.length) {
+        } else if (Array.isArray(response.data) && response.data.length) {
           const newState = {...this.state}
           newState.loading = false;
           newState.properties = [...response.data]
           this.setState({...newState});
         } else {
+          console.log('DATA TYPE ERROR');
           console.log(response.data);
           console.log(response.status);
           console.log(response.statusText);
@@ -98,7 +100,13 @@ class App extends React.Component {
             className="subhead"
             style={{ paddingTop: 20, textAlign: "center", width: "100%"  }}
           >
-            Search/Filter by address to find property owners. Search/Filter by owner name to find all properties owned by that owner.
+            Search/Filter by address to find property owners.
+          </h3>
+          <h3
+            className="subhead"
+            style={{ paddingTop: 20, textAlign: "center", width: "100%"  }}
+          >
+            Search/Filter by owner name to find all properties owned by that owner.
           </h3>
           <div className="gridWrapper">
             <MaterialTable

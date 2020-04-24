@@ -68,11 +68,17 @@ class App extends React.Component {
           const newState = {...this.state}
           newState.loading = false;
           this.setState({...newState});
-        } else {
+        } else if (typeof response.data == "array" && response.data.length) {
           const newState = {...this.state}
           newState.loading = false;
           newState.properties = [...response.data]
           this.setState({...newState});
+        } else {
+          console.log(response.data);
+          console.log(response.status);
+          console.log(response.statusText);
+          console.log(response.headers);
+          console.log(response.config);
         }
         })
       .catch(err => console.log(err));
@@ -99,7 +105,7 @@ class App extends React.Component {
               style={{ width: "100%", margin: "0 20px" }}
               columns={tableFieldList}
               isLoading={this.state.loading}
-              data={this.state.properties}
+              data={this.state.properties.length ? this.state.properties : []}
               title="Portland Properties"
               options={{
                 filtering: true,

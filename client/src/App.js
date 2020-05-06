@@ -102,18 +102,12 @@ class App extends React.Component {
           >
             Please be patient during initial pageload. It's lot of data and we're on the cheapest hosting plan...
           </p>
-          <h3
-            className="subhead"
+          <p
+            className="info"
             style={{ paddingTop: 20, textAlign: "center", width: "100%"  }}
           >
-            Search/Filter by address to find property owners.
-          </h3>
-          <h3
-            className="subhead"
-            style={{ paddingTop: 20, textAlign: "center", width: "100%"  }}
-          >
-            Search/Filter by owner name to find all properties owned by that owner.
-          </h3>
+            Search or Filter by address to find property owners. Search or Filter by owner name to find all properties owned by that owner.
+          </p>
           <div className="gridWrapper">
             <MaterialTable
               style={{ width: "100%", margin: "0 20px" }}

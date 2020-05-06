@@ -94,8 +94,14 @@ class App extends React.Component {
             className="head"
             style={{ paddingTop: 20, textAlign: "center", width: "100%"  }}
           >
-            Portland Properties
+            Portland Rental Properties
           </h2>
+          <p
+            className="info"
+            style={{ paddingTop: 20, textAlign: "center", width: "100%"  }}
+          >
+            Please be patient during initial pageload. It's lot of data and we're on the cheapest hosting plan...
+          </p>
           <h3
             className="subhead"
             style={{ paddingTop: 20, textAlign: "center", width: "100%"  }}

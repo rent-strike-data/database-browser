@@ -23,6 +23,6 @@
     "prepare": "yarn run snyk-protect"
   },
   "devDependencies": {
-    "snyk": "^1.310.0"
+    "snyk": "^1.996.0"
   }
 }
